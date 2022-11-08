@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Player : MonoBehaviour
     public Joystick joyStick;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public string LevelDown;
+    public string LevelUp;
 
     private CharacterController controller;
 
@@ -39,10 +42,7 @@ public class Player : MonoBehaviour
                 focusEnemy = enemy;
             }
         }
-
-
-
-        // 取得方向鍵輸入
+// 取得方向鍵輸入
         // float h = Input.GetAxis("Horizontal");
         // float v = Input.GetAxis("Vertical");
 
@@ -105,4 +105,6 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
     }
+    
+        
 }
